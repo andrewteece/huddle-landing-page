@@ -15,4 +15,175 @@
 
     --clr-primary-400: hsl(257, 40%, 49%);
     --clr-accent-400: hsl(300, 69%, 71%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+}
+
+/* CSS Basic Reset */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+}
+
+/* Base Styles */
+
+body {
+    font-family: var(--ff-body);
+    line-height: 1.5;
+    background-image: url(images/bg-mobile.svg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-color: var(--clr-primary-400);
+    min-height: 100vh;
+    display: grid;
+    padding: 2rem 3rem;
+    grid-template-rows: max-content;
+    max-width: 59rem;
+    margin: 0 auto;
+}
+
+header {
+    margin-bottom: 2rem;
+}
+
+header img {
+    height: 2.5rem;
+}
+
+main img {
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+main section {
+    text-align: center;
+}
+
+main section h1 {
+    font-family: var(--ff-headings);
+    font-size: var(--fs-600);
+    font-weight: var(--fw-bold);
+    color: var(--clr-neutral-100);
+    margin-bottom: 1.5rem;
+}
+
+main section p {
+    font-size: var(--fs-base);
+    font-weight: var(--fw-reg);
+    color: var(--clr-neutral-100);
+    margin-bottom: 2rem;
+}
+
+main section button {
+    width: 100%;
+    max-width: 12.5rem;
+    height: 2.5rem;
+    font-size: var(--fs-sm);
+    border: 0;
+    border-radius: 20px;
+    color: var(--clr-primary-400);
+    box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.27);
+    cursor: pointer;
+}
+
+main section button:hover,
+main section button:focus {
+    color: var(--clr-neutral-100);
+    background-color: var(--clr-accent-400);
+    transition: all 400ms ease-in-out;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+footer a {
+    border: 1px solid var(--clr-neutral-100);
+    padding: 5px 10px;
+    border-radius: 100%;
+}
+
+footer a:hover {
+    border-color: var(--clr-accent-400);
+    transition: all 300ms ease-in-out;
+}
+
+footer i {
+    color: var(--clr-neutral-100);
+}
+
+footer i:hover,
+footer i:focus {
+    color: var(--clr-accent-400);
+    border-color: var(--clr-accent-400);
+    transition: all 300ms ease-in-out;
+}
+
+@media screen and (min-width: 1290px) {
+    body {
+        background-image: url(images/bg-desktop.svg);
+        background-position: left;
+        background-size: cover;
+        padding: 5rem 8rem 4rem 7rem;
+        max-width: 90%;
+    }
+
+    header {
+        margin-bottom: 7rem;
+    }
+
+    header img {
+        height: 4rem;
+        margin-bottom: 5rem;
+    }
+
+    main {
+        display: flex;
+        gap: 5rem;
+        margin-bottom: 2rem;
+    }
+
+    main img {
+        margin: 0;
+    }
+
+    main section {
+        text-align: left;
+        padding-top: 4rem;
+    }
+
+    main section h1 {
+        font-size: var(--fs-800);
+        width: 20ch;
+    }
+
+    main section p {
+        font-size: var(--fs-500);
+        width: 55ch;
+        line-height: 1.6;
+    }
+
+    main section button {
+        height: 3.5rem;
+        font-size: var(--fs-500);
+        border-radius: 28px;
+    }
+
+    footer {
+        justify-content: right;
+        gap: 2rem;
+    }
 }
